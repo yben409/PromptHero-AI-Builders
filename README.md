@@ -246,7 +246,7 @@ Open `http://localhost:5173`.
 
 ## Design Philosophy
 
-The visual interface is intentionally dark and minimal — zinc-900 backgrounds, subtle borders, violet accent for AI actions, amber for warnings. The UI should recede so the generated images and style thumbnails are the primary visual content. Every loading state shows what the AI is actually doing (composing vs. rendering) rather than a generic spinner, making the two-stage pipeline legible to the user.
+The visual interface is intentionally dark and minimal — zinc-900 backgrounds, subtle borders, violet accent for AI actions, amber for warnings. The UI should recede so the generated images and style thumbnails are the primary visual content. 
 
 ---
 
