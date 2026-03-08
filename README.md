@@ -137,9 +137,13 @@ The composition system prompt treats Claude as a **master prompt engineer with c
 
 ### Analyze Mode
 
-<!-- SCREENSHOT 2: Analyze mode with an image just uploaded and the style tag form filled out, showing the 6 aesthetic fields populated by Claude. Caption: "Claude Vision decomposes a reference image into a structured aesthetic fingerprint." -->
+<!-- SCREENSHOT analyze1.png: Analyze mode with an image just uploaded — show the image preview on the left and Claude's loading state or the raw image drop zone. Caption: "Drop any reference image into the analyzer." -->
 
-![Analyze Mode](docs/screenshots/analyze.png)
+![Analyze — Upload](docs/screenshots/analyze1.png)
+
+<!-- SCREENSHOT analyze2.png: The same Analyze mode after Claude has responded — show the 6 aesthetic fields fully populated (colorGrading, lightingMood, textureQuality, compositionStyle, contrastLevel, atmosphere) and the tag name at the top. Caption: "Claude Vision decomposes it into a structured aesthetic fingerprint across 6 visual dimensions." -->
+
+![Analyze — Result](docs/screenshots/analyze2.png)
 
 - Upload any image (JPEG, PNG, WEBP)
 - Claude Vision analyzes it into 6 structured aesthetic dimensions
@@ -148,9 +152,13 @@ The composition system prompt treats Claude as a **master prompt engineer with c
 
 ### Create Mode
 
-<!-- SCREENSHOT 3: Create mode with 2-3 tags selected, showing the blend preview (overlapping circle thumbnails) and a long composed prompt in the "Composed Prompt" card. Caption: "Multi-style blending: Claude composes a 300-400 word cinematic brief from multiple Style Tags." -->
+<!-- SCREENSHOT create1.png: Create mode with 2-3 tags selected, the overlapping circle blend preview visible, the text prompt filled in, and the two-step pipeline loading animation active (Claude composing step lit up in violet). Caption: "Select tags, describe your subject — Claude composes a cinematic brief in real time." -->
 
-![Create Mode - Blend](docs/screenshots/create-blend.png)
+![Create — Composing](docs/screenshots/create1.png)
+
+<!-- SCREENSHOT create2.png: Create mode after generation is complete — show the result card with the style source thumbnails on the left column, the generated image on the right, and the long composed prompt card visible above it. Caption: "The 300–400 word composed prompt and its FLUX-rendered output." -->
+
+![Create — Result](docs/screenshots/create2.png)
 
 - Write a subject/scene concept in plain language
 - Select one or more Style Tags from your library
