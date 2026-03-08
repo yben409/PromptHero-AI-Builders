@@ -181,6 +181,10 @@ Conflict detection runs entirely on the frontend using keyword analysis of each 
 
 ### Session History
 
+<!-- SCREENSHOT history.png: The session history strip at the bottom of the Create panel — show 4-5 thumbnail cards side by side, with tag labels visible on each card and the "Latest" badge on the first one. Caption: "Every generation is saved to session history with its prompt and source tags for one-click restore." -->
+
+![Session History](docs/screenshots/history.png)
+
 Every generation is stored in session history with its composed prompt, source tags, and thumbnail. Clicking any history card fully restores the session state — prompt, selected tags, and image.
 
 ---
