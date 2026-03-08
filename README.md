@@ -137,9 +137,13 @@ The composition system prompt treats Claude as a **master prompt engineer with c
 
 ### Analyze Mode
 
-<!-- SCREENSHOT 2: Analyze mode with an image just uploaded and the style tag form filled out, showing the 6 aesthetic fields populated by Claude. Caption: "Claude Vision decomposes a reference image into a structured aesthetic fingerprint." -->
+<!-- SCREENSHOT analyze1.png: Analyze mode with an image just uploaded — show the image preview on the left and Claude's loading state or the raw image drop zone. Caption: "Drop any reference image into the analyzer." -->
 
-![Analyze Mode](docs/screenshots/analyze.png)
+![Analyze — Upload](docs/screenshots/analyze1.png)
+
+<!-- SCREENSHOT analyze2.png: The same Analyze mode after Claude has responded — show the 6 aesthetic fields fully populated (colorGrading, lightingMood, textureQuality, compositionStyle, contrastLevel, atmosphere) and the tag name at the top. Caption: "Claude Vision decomposes it into a structured aesthetic fingerprint across 6 visual dimensions." -->
+
+![Analyze — Result](docs/screenshots/analyze2.png)
 
 - Upload any image (JPEG, PNG, WEBP)
 - Claude Vision analyzes it into 6 structured aesthetic dimensions
@@ -148,9 +152,13 @@ The composition system prompt treats Claude as a **master prompt engineer with c
 
 ### Create Mode
 
-<!-- SCREENSHOT 3: Create mode with 2-3 tags selected, showing the blend preview (overlapping circle thumbnails) and a long composed prompt in the "Composed Prompt" card. Caption: "Multi-style blending: Claude composes a 300-400 word cinematic brief from multiple Style Tags." -->
+<!-- SCREENSHOT create1.png: Create mode with 2-3 tags selected, the overlapping circle blend preview visible, the text prompt filled in, and the two-step pipeline loading animation active (Claude composing step lit up in violet). Caption: "Select tags, describe your subject — Claude composes a cinematic brief in real time." -->
 
-![Create Mode - Blend](docs/screenshots/create-blend.png)
+![Create — Composing](docs/screenshots/create1.png)
+
+<!-- SCREENSHOT create2.png: Create mode after generation is complete — show the result card with the style source thumbnails on the left column, the generated image on the right, and the long composed prompt card visible above it. Caption: "The 300–400 word composed prompt and its FLUX-rendered output." -->
+
+![Create — Result](docs/screenshots/create2.png)
 
 - Write a subject/scene concept in plain language
 - Select one or more Style Tags from your library
@@ -172,10 +180,6 @@ When two selected tags carry visually incompatible aesthetics — monochrome vs.
 Conflict detection runs entirely on the frontend using keyword analysis of each tag's `colorGrading`, `generationPrompt`, and `atmosphere` fields against a taxonomy of known visual incompatibilities.
 
 ### Session History
-
-<!-- SCREENSHOT 5: The session history strip at the bottom of the Create panel, showing 4-5 thumbnail cards with their tags labeled. Caption: "Every generation is saved to session history with its prompt and source tags for one-click restore." -->
-
-![Session History](docs/screenshots/history.png)
 
 Every generation is stored in session history with its composed prompt, source tags, and thumbnail. Clicking any history card fully restores the session state — prompt, selected tags, and image.
 
@@ -246,7 +250,7 @@ Open `http://localhost:5173`.
 
 ## Design Philosophy
 
-The visual interface is intentionally dark and minimal — zinc-900 backgrounds, subtle borders, violet accent for AI actions, amber for warnings. The UI should recede so the generated images and style thumbnails are the primary visual content. 
+The visual interface is intentionally dark and minimal — zinc-900 backgrounds, subtle borders, violet accent for AI actions, amber for warnings. The UI should recede so the generated images and style thumbnails are the primary visual content. Every loading state shows what the AI is actually doing (composing vs. rendering) rather than a generic spinner, making the two-stage pipeline legible to the user.
 
 ---
 
